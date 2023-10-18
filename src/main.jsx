@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -15,6 +16,7 @@ import SignUp from './pages/SignUp/SignUp';
 import AddProduct from './pages/AddProduct/AddProduct';
 import PrivateRoute from './Private/PrivateRoute';
 import BrandPage from './pages/BrandPage/BrandPage';
+import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,11 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element: <Login></Login>
+      },
+      {
+        path:"/update/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
       }
     ]
   },
