@@ -43,7 +43,7 @@ const Login = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="hero h-full bg-base-200 pt-10 pb-28">
+            <div className="hero h-full bg-orange-200 pt-10 pb-28">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Login now!</h1>

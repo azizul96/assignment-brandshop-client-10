@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
@@ -12,6 +13,8 @@ import AuthProvider from './context/AuthProvider';
 import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import AddProduct from './pages/AddProduct/AddProduct';
+import PrivateRoute from './Private/PrivateRoute';
+import BrandPage from './pages/BrandPage/BrandPage';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +23,18 @@ const router = createBrowserRouter([
     children: [
       {
         path:"/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('/brand.json')
       },
       {
         path:"/addProduct",
-        element: <AddProduct></AddProduct>
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+      },
+      {
+        path:"/brand/:brand",
+        element: <BrandPage></BrandPage>,
+        loader: ({params})=> fetch(`http://localhost:5000/products/${params.brand}`),
+        loader: ()=> fetch('http://localhost:5000/products')
       },
       {
         path:"/signUp",

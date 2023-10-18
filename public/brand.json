@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/dDtmXvd/nike.webp",
+        "brand": "Nike" 
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/MpmScjG/gucci.webp",
+        "brand": "Gucci"
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/JdhmSs6/zara.jpg",
+        "brand": "Zara" 
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/wB0pCGX/hnm.jpg",
+        "brand": "H&M" 
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/tXk8XYR/levis.jpg",
+        "brand": "Levi's"
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/ThrVnC1/adidas.jpg",
+        "brand": "Adidas" 
+    }
+    
+]

@@ -40,7 +40,7 @@ const SignUp = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="hero h-full bg-base-200 pb-10 ">
+            <div className="hero h-full bg-orange-200 pb-10 ">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Sign Up now!</h1>
