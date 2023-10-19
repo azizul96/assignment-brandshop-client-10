@@ -33,7 +33,8 @@ const DetailsCard = ({product}) => {
                     <img src={image} alt="image" className="h-auto md:h-96 w-full rounded-xl" />
                 </figure>
                 <div className=" card-body items-start text-left  mb-5">
-                    <h2 className="card-title">{name}</h2>
+                    <h2 className="card-title font-bold">{name}</h2>
+                    <p className="block font-semibold">Brand: {brand}</p>
                     <p className="block">{description}</p>
                     
                 </div>

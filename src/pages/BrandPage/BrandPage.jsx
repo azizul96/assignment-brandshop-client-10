@@ -2,6 +2,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Navbar from "../../component/Navbar/Navbar";
+import Footer from "../../component/Footer/Footer";
 
 
 const BrandPage = () => {
@@ -46,9 +47,17 @@ const BrandPage = () => {
             </div>
             </div>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 my-10">
-                {
+                { brandProducts.length <= 0 ? 
+                <div className="flex justify-center items-center mx-auto col-span-full ">
+                    <img className="" src="/noData.png" alt="" />
+                </div>
+
+                :
                     brandProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );

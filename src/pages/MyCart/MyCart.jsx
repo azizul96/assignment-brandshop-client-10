@@ -4,6 +4,8 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 
+
+
 const MyCart = () => {
     const loadedCarts = useLoaderData()
     const [carts, setCarts] = useState(loadedCarts)
@@ -48,21 +50,32 @@ const MyCart = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div>
+                <h1 className="my-10 text-center font-bold ">Selected Cart</h1>
+            </div>
+            <div className="container mx-auto px-5 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-center">
                 {
-                    carts.map(cart =><div key={cart._id} className="card card-side shadow-xl bg-lime-200">
-                    <figure><img className="w-52 md:w-64" src={cart.image} alt="image"/></figure>
-                    <div className="ml-3 mt-4 space-y-1">
-                        <h2 className="font-bold">{cart.name}</h2>
-                        <p>{cart.brand}</p>
-                        <p>Rating: {cart.rating}</p>
-                        <p className="font-semibold">$ {cart.price}</p>
-                        <div className="card-actions justify-start ">
-                            <button onClick={()=>handleDelete(cart._id)} className="btn btn-sm btn-error text-white">Delete</button>
+                    carts.map(cart => 
+                        <div key={cart.id} className=" h-full overflow-hidden bg-green-200 rounded-lg shadow-lg dark:bg-gray-800">
+                        <div className="px-4 py-2">
+                            <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">{cart.name}</h1>
+                            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{cart.brand}</p>
+                        </div>
+                    
+                        <img className="object-cover w-full h-48 mt-2" src={cart.image} alt="NIKE AIR"/>
+                    
+                        <div className="flex items-center justify-between px-4 py-2 bg-red-900">
+                            <h1 className="text-lg font-bold text-white">${cart.price}</h1>
+                            <button  className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Buy</button>
+                            <button onClick={()=>handleDelete(cart._id)} className="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-300 transform bg-white rounded hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Delete</button>
+                            
                         </div>
                     </div>
-                    </div>)
+                    
+                    )
                 }
+            </div>
+            <div>
             </div>
         </div>
     );

@@ -20,7 +20,7 @@ const Navbar = () => {
     }
     
     return (
-        <div className="container mx-auto py-2">
+        <div className="container mx-auto px-5 py-2">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
