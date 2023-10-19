@@ -45,7 +45,7 @@ const BrandPage = () => {
                 
             </div>
             </div>
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 my-10">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 my-10">
                 {
                     brandProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }

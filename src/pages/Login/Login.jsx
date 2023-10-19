@@ -41,13 +41,13 @@ const Login = () => {
         })
     }
     return (
-        <div>
+        <div className="bg-orange-200">
             <Navbar></Navbar>
             <div className="hero h-full bg-orange-200 pt-10 pb-28">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Make sure your email and password is correct.</p>
+                        <h1 className="text-5xl font-bold text-violet-500">Login now!</h1>
+                        <p className="py-6 text-violet-500">Make sure your email and password is correct.</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
@@ -69,16 +69,16 @@ const Login = () => {
                                 </span>
                             </div>
                             <div className="form-control mt-6 p-0">
-                                <button type='submit' className="btn btn-neutral">Login</button>
+                                <button type='submit' className="btn btn-info font-semibold bg-violet-500 text-white ">Login</button>
                             </div>
-                            <label className="label">
-                                New here? <Link to="/signUp" className="label-text-alt link link-hover">Create an account</Link>
+                            <label className="label text-violet-500">
+                                New here? <Link to="/signUp" className="label-text-alt link link-hover text-violet-500">Create an account</Link>
                             </label>
                             
                             {/* <SocialLogin /> */}
                         </form>
                         <div className="mb-5">
-                                <label className="label justify-center items-center gap-5">
+                                <label className="label justify-center items-center gap-5 text-violet-500">
                                     Login With <FcGoogle onClick={handleGoogleLogin} className="text-3xl cursor-pointer"></FcGoogle>
                                 </label>
                                 

@@ -7,9 +7,9 @@ const Navbar = () => {
 
 
     const navLinks = <>
-        <li><NavLink to={"/"}>Home</NavLink></li>
-        <li><NavLink to={"/addProduct"}>Add Product</NavLink></li>
-        <li><NavLink to={"/myCart"}>My Cart</NavLink></li>
+        <li className="font-semibold"><NavLink to={"/"}>Home</NavLink></li>
+        <li className="font-semibold"><NavLink to={"/addProduct"}>Add Product</NavLink></li>
+        <li className="font-semibold"><NavLink to={"/myCart"}>My Cart</NavLink></li>
         
         
     </>
@@ -20,7 +20,7 @@ const Navbar = () => {
     }
     
     return (
-        <div className="bg-orange-300   py-2">
+        <div className="container mx-auto py-2">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -32,8 +32,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <Link to='/' className=" flex justify-center items-center gap-2 ">
-                        <img className="w-10" src="/logo.png" alt="" />
-                        <h5 className="font-semibold">Alfa Shop</h5>
+                        <img className="w-14" src="/logo.png" alt="" />
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -67,7 +66,7 @@ const Navbar = () => {
                         </div>
                         :
                         <Link to='/login'>
-                            <button className="btn btn-sm  btn-ghost font-bold">Login</button>
+                            <button className="btn btn-sm  btn-ghost font-bold text-red-600">Login</button>
                         </Link>
                     }
                 </div>    

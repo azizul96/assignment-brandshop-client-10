@@ -38,13 +38,13 @@ const SignUp = () => {
 
     // Unlock Your Corporate Event Success
     return (
-        <div>
+        <div className="bg-orange-200">
             <Navbar></Navbar>
-            <div className="hero h-full bg-orange-200 pb-10 ">
+            <div className="hero h-full pb-10 ">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Sign Up now!</h1>
-                        <p className="py-5"> – Sign Up Now!</p>
+                        <h1 className="text-5xl font-bold text-violet-500">Sign Up now!</h1>
+                        <p className="py-5 text-violet-500"> – Sign Up Now!</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSignUp} className="card-body">
@@ -78,12 +78,12 @@ const SignUp = () => {
                                 </span>
                             </div>
                             <div className="form-control mt-6 p-0">
-                                <button className="btn btn-neutral" type='submit'>Register</button>
+                                <button className="btn btn-info bg-violet-500 text-white" type='submit'>Register</button>
                             </div>
-                            <label className="label">
-                                Have an account? <Link to="/login" className="label-text-alt link link-hover">Please Login</Link>
+                            <label className="label text-violet-500">
+                                Have an account? <Link to="/login" className="label-text-alt link link-hover text-violet-500">Please Login</Link>
                             </label>
-                            {/* <SocialLogin /> */}
+                            
                         </form>
                     </div>
                 </div>
