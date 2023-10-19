@@ -18,7 +18,7 @@ const UpdateProduct = () => {
         const rating = form.rating.value
         const updateData = {image, name, brand, category, price, rating}
 
-        fetch(`http://localhost:5000/products/${loadedData._id}`,{
+        fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products/${loadedData._id}`,{
             method: 'PATCH',
             headers:{
                 'content-type':'application/json'

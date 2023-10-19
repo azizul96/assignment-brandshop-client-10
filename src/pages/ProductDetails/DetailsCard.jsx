@@ -9,7 +9,7 @@ const DetailsCard = ({product}) => {
 
     const handleAddToCart = ()=>{
         const productData = {image, name, brand, category, price, description, rating}
-        fetch('http://localhost:5000/carts',{
+        fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/carts',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'

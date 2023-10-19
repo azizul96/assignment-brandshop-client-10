@@ -23,7 +23,7 @@ const MyCart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-            fetch(`http://localhost:5000/carts/${_id}`,{
+            fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/carts/${_id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())

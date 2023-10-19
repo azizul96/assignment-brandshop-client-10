@@ -17,7 +17,7 @@ const AddProduct = () => {
         // console.log(image,name,brand, category,price,description,rating);
         const myData = {image, name, brand, category, price, description, rating}
 
-        fetch('http://localhost:5000/products',{
+        fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
