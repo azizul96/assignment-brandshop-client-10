@@ -17,7 +17,7 @@ const AddProduct = () => {
         // console.log(image,name,brand, category,price,description,rating);
         const myData = {image, name, brand, category, price, description, rating}
 
-        fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products',{
+        fetch('https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/products',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
@@ -36,11 +36,11 @@ const AddProduct = () => {
 
 
     return (
-        <div>
-            <div>
+        <div className="bg-gradient-to-b from-purple-400">
+            <div className="">
                 <Navbar></Navbar>
             </div>
-            <div className="flex justify-center items-center bg-orange-200 pt-5">
+            <div className="flex justify-center items-center  pt-5">
                 <div className="hero  ">
                 <div className="hero-content flex-col w-full">
                     
@@ -99,7 +99,7 @@ const AddProduct = () => {
                         <input type="text" placeholder="Rating" name="rating" className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-success font-bold">Add Product</button>
+                        <button className="btn btn-secondary  text-white font-bold">Add Product</button>
                         </div>
                     </form>
                     </div>

@@ -9,7 +9,7 @@ const DetailsCard = ({product}) => {
 
     const handleAddToCart = ()=>{
         const productData = {image, name, brand, category, price, description, rating}
-        fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/carts',{
+        fetch('https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/carts',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
@@ -26,9 +26,9 @@ const DetailsCard = ({product}) => {
         })
     }
     return (
-        <div>
+        <div className="">
             <div className="container mx-auto px-3">
-            <div className="shadow-xl rounded-lg h-full mb-5 md:w-2/3 lg:w-2/4 mx-auto px-5 bg-orange-200">
+            <div className="shadow-xl rounded-lg h-full mb-5 md:w-2/3 lg:w-2/4 mx-auto px-5 ">
                 <figure className="p-5 rounded-xl">
                     <img src={image} alt="image" className="h-auto md:h-96 w-full rounded-xl" />
                 </figure>

@@ -19,11 +19,13 @@ import BrandPage from './pages/BrandPage/BrandPage';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import MyCart from './pages/MyCart/MyCart';
+import Error from './pages/Error/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path:"/",
@@ -31,15 +33,15 @@ const router = createBrowserRouter([
         loader: ()=> fetch('/brand.json')
       },
       {
+        path:"/brand/:brand",
+        element: <BrandPage></BrandPage>,
+        loader: ()=> fetch('https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/products')
+      },
+      {
         path:"/addProduct",
         element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
-      {
-        path:"/brand/:brand",
-        element: <BrandPage></BrandPage>,
-        loader: ({params})=> fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products/${params.brand}`),
-        loader: ()=> fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products')
-      },
+      
       {
         path:"/signUp",
         element: <SignUp></SignUp>
@@ -51,17 +53,17 @@ const router = createBrowserRouter([
       {
         path:"/update/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({params})=> fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products/${params.id}`)
+        loader: ({params})=> fetch(`https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/products/${params.id}`)
       },
       {
         path:"/details/:id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ()=> fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products')
+        loader: ()=> fetch('https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/products')
       },
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute> ,
-        loader: ()=> fetch('https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/carts')
+        loader: ()=> fetch('https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/carts')
       }
 
     ]

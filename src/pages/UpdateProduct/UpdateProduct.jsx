@@ -18,7 +18,7 @@ const UpdateProduct = () => {
         const rating = form.rating.value
         const updateData = {image, name, brand, category, price, rating}
 
-        fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/products/${loadedData._id}`,{
+        fetch(`https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/products/${loadedData._id}`,{
             method: 'PATCH',
             headers:{
                 'content-type':'application/json'
@@ -35,11 +35,11 @@ const UpdateProduct = () => {
     }
 
     return (
-        <div>
+        <div className="bg-gradient-to-b from-purple-400">
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="flex justify-center items-center bg-orange-200 pt-5">
+            <div className="flex justify-center items-center  pt-5">
                 <div className="hero  ">
                 <div className="hero-content flex-col w-full">
                     
@@ -93,7 +93,7 @@ const UpdateProduct = () => {
                         <input type="text" placeholder="Rating" name="rating" defaultValue={loadedData.rating} className="input input-bordered" required />
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-success font-bold">Update Product</button>
+                        <button className="btn btn-secondary font-bold">Update Product</button>
                         </div>
                     </form>
                     </div>

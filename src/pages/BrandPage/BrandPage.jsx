@@ -3,20 +3,25 @@ import { useLoaderData, useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Navbar from "../../component/Navbar/Navbar";
 import Footer from "../../component/Footer/Footer";
+import { useEffect, useState } from "react";
 
 
 const BrandPage = () => {
     const category = useParams()
     const allProducts = useLoaderData()
-    
+   const [filterData, setFilterData] = useState([])
     
 
-    const brandProducts = allProducts.filter(product => product.brand == category.brand)
+    useEffect(()=>{
+        const brandProducts = allProducts.filter(item => item.brand == category.brand)
+        setFilterData(brandProducts)
+    },[allProducts, category.brand])
     
-    console.log(brandProducts);
+    console.log(filterData );
+    console.log(category);
 
     return (
-        <div>
+        <div className="bg-gradient-to-b from-purple-400">
             <div>
                 <Navbar></Navbar>
             </div>
@@ -45,15 +50,18 @@ const BrandPage = () => {
                 </div> 
                 
             </div>
+            <div>
+                <h1 className="text-center text-3xl font-bold my-10">Available Products</h1>
+            </div>
             </div>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 my-10">
-                { brandProducts.length <= 0 ? 
+                { filterData.length <= 0 ? 
                 <div className="flex justify-center items-center mx-auto col-span-full ">
                     <img className="" src="/noData.png" alt="" />
                 </div>
 
                 :
-                    brandProducts.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
+                filterData.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }
             </div>
             <div>

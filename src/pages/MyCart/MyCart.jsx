@@ -23,7 +23,7 @@ const MyCart = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-            fetch(`https://assignment-brandshop-server-1m0aln34q-azizul96s-projects.vercel.app/carts/${_id}`,{
+            fetch(`https://assignment-brandshop-server-ee5jbo2d1-azizul96s-projects.vercel.app/carts/${_id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -46,17 +46,17 @@ const MyCart = () => {
           })
     }
     return (
-        <div>
+        <div className="bg-gradient-to-b from-purple-400">
             <div>
                 <Navbar></Navbar>
             </div>
             <div>
-                <h1 className="my-10 text-center font-bold ">Selected Cart</h1>
+                <h1 className="my-10 text-center font-bold ">Selected Item on Cart</h1>
             </div>
             <div className="container mx-auto px-5 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-center">
                 {
                     carts.map(cart => 
-                        <div key={cart.id} className=" h-full overflow-hidden bg-green-200 rounded-lg shadow-lg dark:bg-gray-800">
+                        <div key={cart._id} className=" h-full overflow-hidden bg-green-200 rounded-lg shadow-lg dark:bg-gray-800">
                         <div className="px-4 py-2">
                             <h1 className="text-xl font-bold text-gray-800 uppercase dark:text-white">{cart.name}</h1>
                             <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{cart.brand}</p>

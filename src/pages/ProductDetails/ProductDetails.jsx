@@ -17,11 +17,11 @@ const ProductDetails = () => {
     },[id, loadedProducts])
     console.log(product);
     return (
-        <div>
+        <div className="bg-gradient-to-b from-purple-400">
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="mt-10">
+            <div className="">
                 <DetailsCard product={product}></DetailsCard>
             </div>
         </div>
