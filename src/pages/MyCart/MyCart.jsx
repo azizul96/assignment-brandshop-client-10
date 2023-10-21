@@ -46,12 +46,12 @@ const MyCart = () => {
           })
     }
     return (
-        <div className="bg-gradient-to-b from-purple-400">
+        <div className="bg-gradient-to-b from-purple-400 ">
             <div>
                 <Navbar></Navbar>
             </div>
             <div>
-                <h1 className="my-10 text-center font-bold ">Selected Item on Cart</h1>
+                <h1 className="my-10 text-center text-3xl font-bold px-5 ">Selected Items on Cart</h1>
             </div>
             <div className="container mx-auto px-5 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-center">
                 {

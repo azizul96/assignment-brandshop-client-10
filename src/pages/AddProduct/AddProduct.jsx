@@ -36,11 +36,11 @@ const AddProduct = () => {
 
 
     return (
-        <div className="bg-gradient-to-b from-purple-400">
+        <div className="bg-gradient-to-b from-purple-400 ">
             <div className="">
                 <Navbar></Navbar>
             </div>
-            <div className="flex justify-center items-center  pt-5">
+            <div className="flex justify-center items-center container mx-auto  pt-5">
                 <div className="hero  ">
                 <div className="hero-content flex-col w-full">
                     

@@ -26,9 +26,9 @@ const DetailsCard = ({product}) => {
         })
     }
     return (
-        <div className="">
-            <div className="container mx-auto px-3">
-            <div className="shadow-xl rounded-lg h-full mb-5 md:w-2/3 lg:w-2/4 mx-auto px-5 ">
+        <div className="container mx-auto px-5">
+            <div className="">
+            <div className="shadow-xl rounded-lg h-full mb-5 md:w-2/3 lg:w-2/4 mx-auto px-3 ">
                 <figure className="p-5 rounded-xl">
                     <img src={image} alt="image" className="h-auto md:h-96 w-full rounded-xl" />
                 </figure>

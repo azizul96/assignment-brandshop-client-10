@@ -21,7 +21,7 @@ const ProductDetails = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="">
+            <div className="container mx-auto">
                 <DetailsCard product={product}></DetailsCard>
             </div>
         </div>
